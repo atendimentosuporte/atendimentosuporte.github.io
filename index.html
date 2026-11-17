@@ -1,112 +1,946 @@
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#071a2b">
-<meta name="description" content="Site institucional da CREDFC Sociedade de Crédito Direto S.A.">
-<title>CREDFC | Sociedade de Crédito Direto S.A.</title>
-<style>
-:root{--navy:#071a2b;--navy2:#0c263c;--panel:#102f47;--mint:#9be5c2;--green:#39b982;--ink:#12283a;--muted:#647789;--paper:#f4f7f8;--white:#fff;--line:#dce5e9;--radius:22px;--shadow:0 18px 50px rgba(5,25,42,.12)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.top{background:var(--navy);color:#d7e5ed;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.top .wrap{display:flex;justify-content:space-between;padding:10px 0;gap:16px}.header{position:sticky;top:0;z-index:20;background:rgba(7,26,43,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font-weight:800;letter-spacing:.04em}.mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,var(--mint),var(--green));display:grid;place-items:center;color:var(--navy);font-weight:900;font-size:18px}.brand small{display:block;font-size:9px;color:#9fb4c2;letter-spacing:.16em;font-weight:600}.links{display:flex;align-items:center;gap:24px}.links a{color:#d7e5ed;text-decoration:none;font-size:13px;font-weight:600}.links a:hover{color:var(--mint)}.menu{display:none;background:none;color:white;border:1px solid #476174;border-radius:10px;padding:9px 12px;font-size:20px}.hero{background:radial-gradient(circle at 82% 20%,rgba(57,185,130,.22),transparent 30%),linear-gradient(125deg,#071a2b 0%,#0b2a42 65%,#123c4c 100%);color:white;overflow:hidden}.hero .wrap{padding:100px 0 110px;display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}.eyebrow{color:var(--mint);font-size:12px;text-transform:uppercase;letter-spacing:.2em;font-weight:800}.hero h1{font-size:clamp(38px,5.2vw,64px);line-height:1.07;letter-spacing:-.045em;margin:18px 0 22px;max-width:760px}.hero p{color:#c4d3dc;font-size:17px;max-width:650px;margin:0}.hero-card{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);border-radius:28px;padding:30px;box-shadow:0 25px 80px rgba(0,0,0,.18)}.hero-card .big{font-size:42px;color:var(--mint);font-weight:800;letter-spacing:-.04em}.hero-card p{font-size:14px}.hero-card hr{border:0;border-top:1px solid rgba(255,255,255,.16);margin:24px 0}.pill{display:inline-flex;padding:8px 13px;border:1px solid rgba(155,229,194,.4);border-radius:999px;color:var(--mint);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:28px}
-.section{padding:86px 0}.section.white{background:white}.section.dark{background:var(--navy);color:white}.section-head{max-width:720px;margin-bottom:38px}.section-head .eyebrow{color:#238d63}.dark .section-head .eyebrow{color:var(--mint)}h2{font-size:clamp(30px,4vw,42px);line-height:1.14;letter-spacing:-.035em;margin:10px 0 14px}h3{font-size:19px;line-height:1.3;margin:0 0 10px}.lead{color:var(--muted);font-size:17px}.dark .lead{color:#bdcbd4}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:27px;box-shadow:0 5px 20px rgba(5,25,42,.035)}.card .num{color:#238d63;font-size:12px;font-weight:800;letter-spacing:.12em;margin-bottom:18px}.card p{margin:0;color:var(--muted);font-size:14px}.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}.about-panel{background:linear-gradient(145deg,#0b2940,#123e4b);border-radius:28px;padding:36px;color:white;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}.about-panel strong{font-size:30px;line-height:1.15;letter-spacing:-.03em}.about-panel span{color:var(--mint);font-size:12px;letter-spacing:.16em;text-transform:uppercase}.facts{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}.fact{padding:17px 0;border-bottom:1px solid var(--line)}.fact small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:700}.fact strong{font-size:15px;overflow-wrap:anywhere}.legal-intro{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:30px}.legal-intro p{max-width:620px;color:var(--muted);margin:0}.legal-list{display:grid;grid-template-columns:1fr 1fr;gap:16px}.legal-item{background:white;border:1px solid var(--line);border-radius:18px;padding:24px}.legal-item p,.legal-item li{font-size:14px;color:#536779}.legal-item ul{padding-left:20px}.notice{background:#fff7e6;border:1px solid #f0d7a6;border-radius:16px;padding:18px 20px;color:#70501a;font-size:13px;margin-top:24px}.contact{background:linear-gradient(125deg,#0b2a42,#0e3b48);border-radius:28px;padding:42px;color:white;display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact p{color:#c5d5dc}.address{font-size:17px;font-weight:650;line-height:1.6}.footer{background:#051421;color:#d6e2e8;padding:48px 0 22px}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:40px;padding-bottom:35px}.footer p,.footer li{color:#9db0bc;font-size:13px}.footer h4{margin:0 0 13px;color:white;font-size:13px}.footer a{color:#c8d9e1;text-decoration:none}.footer a:hover{color:var(--mint)}.footer-links{list-style:none;padding:0;margin:0}.footer-links li{margin:7px 0}.copyright{border-top:1px solid #233b4c;padding-top:18px;color:#8097a6;font-size:11px;display:flex;justify-content:space-between;gap:18px}.legal-page{max-width:920px;margin:auto}.legal-page h3{margin-top:30px}.legal-page p,.legal-page li{color:#526879}.backtop{display:inline-block;color:#207d59;text-decoration:none;font-weight:700;font-size:13px;margin-top:25px}
-@media(max-width:850px){.hero .wrap{grid-template-columns:1fr;gap:32px;padding:75px 0}.grid{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr;gap:30px}.footer-grid{grid-template-columns:1fr 1fr}.links{display:none;position:absolute;left:20px;right:20px;top:70px;background:#0b263a;padding:20px;border:1px solid #29485c;border-radius:16px;flex-direction:column;align-items:flex-start}.links.open{display:flex}.menu{display:block}.legal-intro{display:block}.contact{grid-template-columns:1fr}}
-@media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.top .wrap{font-size:10px}.top .wrap span:last-child{display:none}.nav{min-height:68px}.grid,.legal-list,.facts,.footer-grid{grid-template-columns:1fr}.section{padding:64px 0}.hero .wrap{padding:62px 0}.hero-card{padding:23px}.contact{padding:27px}.copyright{display:block}.copyright span{display:block;margin-top:7px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Cliente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #1565c0;
+            box-shadow: 0 4px 20px rgba(21, 101, 192, 0.15);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1565c0, #0d47a1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 800;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: #1565c0;
+        }
+
+        .nav-whatsapp {
+            background: linear-gradient(135deg, #1565c0, #0d47a1);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3);
+        }
+
+        .nav-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(21, 101, 192, 0.5);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            margin-top: 90px;
+            background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 50%, #ffffff 100%);
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(21, 101, 192, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(21, 101, 192, 0.1);
+            border: 1px solid rgba(21, 101, 192, 0.3);
+            color: #0d47a1;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 30px;
+            animation: pulse-badge 2s infinite;
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(21, 101, 192, 0.3); }
+            50% { box-shadow: 0 0 0 10px rgba(21, 101, 192, 0); }
+        }
+
+        .hero-text h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d47a1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1565c0, #0d47a1);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(21, 101, 192, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(21, 101, 192, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #0d47a1;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: 2px solid #1565c0;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(21, 101, 192, 0.08);
+            transform: translateY(-3px);
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            padding: 80px 0;
+            background: #f8fdf9;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .section-header h2 span {
+            color: #1565c0;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #ffffff, #e3f2fd);
+            border: 1px solid #bbdefb;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #1565c0, #0d47a1);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #1565c0;
+            box-shadow: 0 20px 40px rgba(21, 101, 192, 0.12);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #1565c020, #0d47a120);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+            border: 2px solid #1565c040;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .service-card p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #1565c0, #0d47a1);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3);
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(21, 101, 192, 0.5);
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(21, 101, 192, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            color: #1a1a1a;
+        }
+
+        .cta-section h2 span {
+            color: #1565c0;
+        }
+
+        .cta-section p {
+            color: #555;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-whatsapp {
+            background: linear-gradient(135deg, #1565c0, #0d47a1);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(21, 101, 192, 0.4);
+            position: relative;
+            z-index: 1;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 8px 30px rgba(21, 101, 192, 0.4); }
+            50% { box-shadow: 0 8px 40px rgba(21, 101, 192, 0.7); }
+        }
+
+        .cta-whatsapp:hover {
+            transform: scale(1.05);
+        }
+
+        /* ===== FLOATING WHATSAPP ===== */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #1565c0, #0d47a1);
+            color: #ffffff;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 6px 25px rgba(21, 101, 192, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: pulse-float 2s infinite;
+        }
+
+        .floating-whatsapp svg {
+            width: 36px;
+            height: 36px;
+            fill: #ffffff;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 35px rgba(21, 101, 192, 0.6);
+        }
+
+        @keyframes pulse-float {
+            0%, 100% { box-shadow: 0 6px 25px rgba(21, 101, 192, 0.4); }
+            50% { box-shadow: 0 6px 35px rgba(21, 101, 192, 0.7); }
+        }
+
+        .floating-whatsapp::after {
+            content: 'Fale Conosco';
+            position: absolute;
+            right: 75px;
+            background: #ffffff;
+            color: #0d47a1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            border: 1px solid #1565c040;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .floating-whatsapp:hover::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #e3f2fd;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #bbdefb;
+        }
+
+        footer p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        footer .footer-whatsapp {
+            color: #0d47a1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-text p {
+                font-size: 18px;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+            }
+
+            .nav-whatsapp span {
+                display: none;
+            }
+
+            .nav-whatsapp {
+                padding: 12px 16px;
+            }
+
+            .floating-whatsapp {
+                width: 55px;
+                height: 55px;
+            }
+
+            .floating-whatsapp svg {
+                width: 30px;
+                height: 30px;
+            }
+
+            .floating-whatsapp::after {
+                display: none;
+            }
+
+            .popup-box {
+                padding: 30px 20px;
+            }
+
+            .popup-box h2 {
+                font-size: 20px;
+            }
+        
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+                padding: 0 15px;
+            }
+
+            .service-card {
+                padding: 30px 20px;
+            }
+
+}
+
+        /* Logo image styles */
+        .logo-img {
+            transition: transform 0.3s ease;
+        }
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-logo-img {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .hero-logo-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        /* ===== LEGAL SECTIONS ===== */
+        .legal-section {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .legal-section h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            text-align: center;
+        }
+
+        .legal-section h2 span {
+            color: #1565c0;
+        }
+
+        .legal-section .last-update {
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        .legal-highlight {
+            background: linear-gradient(135deg, #e3f2fd, #e3f2fd);
+            border-left: 4px solid #1565c0;
+            padding: 20px 25px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 40px;
+        }
+
+        .legal-highlight p {
+            color: #333;
+            font-size: 15px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .legal-section h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        .legal-section p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .legal-section ul {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+
+        .legal-section ul li {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        .legal-divider {
+            height: 80px;
+            background: linear-gradient(180deg, #ffffff 0%, #e3f2fd 50%, #ffffff 100%);
+        }
+
+        #politica-privacidade {
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .legal-section {
+                padding: 50px 0;
+            }
+            .legal-section h2 {
+                font-size: 26px;
+            }
+            .legal-section h3 {
+                font-size: 18px;
+            }
+            .legal-divider {
+                height: 50px;
+            }
+        }
+
+    </style>
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
 </head>
 <body>
-<div class="top"><div class="wrap"><span>CREDFC Sociedade de Crédito Direto S.A.</span><span>São Paulo · SP · Brasil</span></div></div>
-<header class="header">
- <nav class="wrap nav" aria-label="Navegação principal">
-  <a class="brand" href="#inicio"><span class="mark">C</span><span>CREDFC<small>SOCIEDADE DE CRÉDITO DIRETO S.A.</small></span></a>
-  <button class="menu" aria-label="Abrir menu" aria-expanded="false" onclick="const n=document.querySelector('.links');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button>
-  <div class="links">
-   <a href="#empresa">A empresa</a><a href="#atuacao">Atuação</a><a href="#governanca">Compromissos</a><a href="#privacidade">Privacidade</a><a href="#termos">Termos de uso</a><a href="#contato">Contato</a>
-  </div>
- </nav>
-</header>
-<main>
-<section class="hero" id="inicio"><div class="wrap">
- <div><div class="eyebrow">Institucional</div><h1>Confiança e responsabilidade nas relações financeiras.</h1>
- <p>Conheça a CREDFC Sociedade de Crédito Direto S.A., sua identificação institucional, seus compromissos de transparência e as informações legais deste site.</p>
- <span class="pill">Informação clara · Responsabilidade · Segurança</span></div>
- <aside class="hero-card"><div class="eyebrow">Identificação empresarial</div><div class="big">CREDFC</div><p>Sociedade de Crédito Direto S.A.</p><hr><p><strong>CNPJ</strong><br>42.627.615/0001-92</p><p><strong>Sede</strong><br>São Paulo – SP, Brasil</p></aside>
-</div></section>
-<section class="section white" id="empresa"><div class="wrap about">
- <div><div class="eyebrow">Quem somos</div><h2>Uma instituição com identidade e compromissos claros.</h2><p class="lead">Este espaço reúne informações institucionais e legais da CREDFC, para que clientes, parceiros e visitantes encontrem os dados essenciais da sociedade.</p></div>
- <div><div class="facts">
-  <div class="fact"><small>Razão social</small><strong>CREDFC Sociedade de Crédito Direto S.A.</strong></div>
-  <div class="fact"><small>CNPJ</small><strong>42.627.615/0001-92</strong></div>
-  <div class="fact"><small>Natureza jurídica</small><strong>Sociedade Anônima</strong></div>
-  <div class="fact"><small>Tipo de unidade</small><strong>Matriz</strong></div>
-  <div class="fact"><small>Endereço</small><strong>Rua Cap. Antônio Rosa, 376, Conj. 31</strong></div>
-  <div class="fact"><small>Bairro</small><strong>Jardim Paulistano</strong></div>
-  <div class="fact"><small>Município / UF</small><strong>São Paulo – SP</strong></div>
-  <div class="fact"><small>CEP</small><strong>01443-900</strong></div>
- </div></div>
-</div></section>
-<section class="section" id="atuacao"><div class="wrap">
- <div class="section-head"><div class="eyebrow">Atuação institucional</div><h2>Informação antes de qualquer decisão.</h2><p class="lead">A CREDFC é identificada como sociedade de crédito direto. As características de eventuais produtos, operações, taxas, custos, critérios de elegibilidade e canais de contratação devem ser consultadas exclusivamente em documentação oficial e específica da operação.</p></div>
- <div class="grid">
-  <article class="card"><div class="num">01 / TRANSPARÊNCIA</div><h3>Informações compreensíveis</h3><p>Condições relevantes de uma operação financeira devem ser apresentadas de forma clara, incluindo custos, encargos, prazos e responsabilidades aplicáveis.</p></article>
-  <article class="card"><div class="num">02 / RESPONSABILIDADE</div><h3>Análise consciente</h3><p>Antes de assumir qualquer obrigação financeira, leia integralmente as condições contratuais e avalie sua capacidade de pagamento.</p></article>
-  <article class="card"><div class="num">03 / PROTEÇÃO</div><h3>Dados e segurança</h3><p>O tratamento de dados pessoais deve observar a legislação aplicável e as finalidades informadas ao titular, conforme a Política de Privacidade.</p></article>
- </div>
-</div></section>
-<section class="section dark" id="governanca"><div class="wrap">
- <div class="section-head"><div class="eyebrow">Nossos compromissos</div><h2>Uma relação baseada em clareza.</h2><p class="lead">Princípios que orientam a apresentação das informações institucionais e legais neste ambiente.</p></div>
- <div class="grid">
-  <article class="card"><div class="num">01</div><h3>Clareza</h3><p>Evitar promessas de aprovação, taxas ou prazos que não estejam formalmente documentados.</p></article>
-  <article class="card"><div class="num">02</div><h3>Privacidade</h3><p>Respeitar os direitos dos titulares e tratar dados pessoais conforme a legislação aplicável.</p></article>
-  <article class="card"><div class="num">03</div><h3>Integridade</h3><p>Identificar corretamente a pessoa jurídica e não confundir informações institucionais com propostas comerciais.</p></article>
- </div>
-</div></section>
-<section class="section white" id="privacidade"><div class="wrap legal-page">
- <div class="legal-intro"><div><div class="eyebrow">Documento legal</div><h2>Política de Privacidade</h2></div><p>Esta política descreve diretrizes gerais de privacidade para a navegação neste site institucional. A versão definitiva deve refletir os sistemas, fornecedores e operações reais da empresa.</p></div>
- <article class="legal-item">
-  <h3>1. Quem é responsável</h3><p>A pessoa jurídica identificada neste site é CREDFC Sociedade de Crédito Direto S.A., CNPJ 42.627.615/0001-92, com sede na Rua Cap. Antônio Rosa, 376, Conj. 31, Jardim Paulistano, São Paulo – SP, CEP 01443-900. A definição das responsabilidades de controlador e operador deve observar cada atividade concreta de tratamento.</p>
-  <h3>2. Dados tratados neste site</h3><p>Esta versão do site não contém formulário de cadastro, área logada, campo para envio de documentos ou ferramenta própria de contratação. A infraestrutura de hospedagem poderá, conforme sua configuração, registrar dados técnicos de acesso e segurança, como endereço IP, data e hora, navegador e registros de requisições. A empresa deve confirmar quais registros são efetivamente coletados pelo provedor.</p>
-  <h3>3. Finalidades e bases legais</h3><p>Quando houver tratamento de dados, ele deverá ocorrer para finalidades legítimas, específicas e informadas, com fundamento em uma das hipóteses legais aplicáveis da Lei nº 13.709/2018 (LGPD), tais como cumprimento de obrigação legal ou regulatória, execução de contrato, exercício regular de direitos ou legítimo interesse, quando cabível.</p>
-  <h3>4. Cookies e tecnologias semelhantes</h3><p>O código desta versão não instala cookies próprios, pixels publicitários ou ferramentas de análise de terceiros. O serviço de hospedagem, a infraestrutura de segurança ou futuras funcionalidades poderão utilizar tecnologias adicionais. Qualquer inclusão deverá ser refletida nesta política e, quando necessário, acompanhada dos mecanismos de escolha e consentimento aplicáveis.</p>
-  <h3>5. Compartilhamento</h3><p>Dados pessoais somente deverão ser compartilhados quando necessário e de forma compatível com a finalidade informada, por exemplo com prestadores de infraestrutura e segurança, autoridades competentes ou terceiros envolvidos em obrigação legal ou contratual. A empresa deverá manter a relação atualizada de operadores e fornecedores que tenham acesso a dados.</p>
-  <h3>6. Armazenamento e segurança</h3><p>Os dados deverão ser mantidos pelo período necessário às finalidades do tratamento e aos prazos legais ou regulatórios aplicáveis. Devem ser adotadas medidas técnicas e administrativas proporcionais para proteger as informações contra acessos não autorizados, perda, alteração ou divulgação indevida. Os prazos efetivos de retenção e controles de segurança precisam ser validados internamente.</p>
-  <h3>7. Direitos dos titulares</h3><p>Nos termos da LGPD, o titular poderá solicitar, conforme aplicável, confirmação da existência de tratamento, acesso, correção, anonimização, bloqueio ou eliminação de dados, portabilidade, informação sobre compartilhamentos e revisão de decisões automatizadas, observadas as condições e exceções legais.</p>
-  <h3>8. Como exercer seus direitos</h3><p>Para que esta política seja publicada como versão final, a CREDFC deverá informar e manter um canal oficial de privacidade e os dados de contato do encarregado pelo tratamento de dados, quando aplicável. Até que esse canal seja inserido e validado, esta página não oferece formulário de solicitação nem recebe pedidos de titulares.</p>
-  <h3>9. Atualizações</h3><p>Esta política poderá ser atualizada para refletir mudanças legais, operacionais ou tecnológicas. A versão vigente deverá indicar sua data de atualização e permanecer disponível para consulta.</p>
- </article>
-</div></section>
-<section class="section" id="termos"><div class="wrap legal-page">
- <div class="legal-intro"><div><div class="eyebrow">Documento legal</div><h2>Termos de Uso</h2></div><p>Regras para acesso e utilização deste site institucional, sem substituir contratos ou documentos específicos de produtos e operações financeiras.</p></div>
- <article class="legal-item">
-  <h3>1. Aceitação</h3><p>Ao acessar este site, o visitante declara que leu e compreendeu estes Termos de Uso. Caso não concorde com as condições, deverá interromper a navegação.</p>
-  <h3>2. Finalidade do site</h3><p>O site tem caráter institucional e informativo. Seu conteúdo não constitui oferta pública, proposta de crédito, promessa de aprovação, aconselhamento financeiro, solicitação de investimento ou garantia de contratação.</p>
-  <h3>3. Informações sobre operações</h3><p>Qualquer produto ou operação financeira, se disponibilizado pela empresa, estará sujeito a análise, requisitos, condições, tarifas, encargos e instrumentos contratuais próprios. Somente os documentos oficiais da operação poderão definir direitos e obrigações das partes.</p>
-  <h3>4. Uso permitido</h3><p>O visitante compromete-se a utilizar o site de forma lícita, sem tentar comprometer sua disponibilidade ou segurança, introduzir códigos maliciosos, acessar áreas não autorizadas ou utilizar o conteúdo para fraude ou violação de direitos.</p>
-  <h3>5. Propriedade intelectual</h3><p>Textos, identidade visual, marcas, elementos gráficos e demais materiais deste site são protegidos pela legislação aplicável. É vedada sua reprodução ou utilização indevida sem autorização, ressalvadas as hipóteses legais.</p>
-  <h3>6. Disponibilidade e alterações</h3><p>A empresa poderá atualizar, corrigir, suspender ou retirar conteúdos e funcionalidades. Embora sejam adotados esforços razoáveis para manter as informações corretas, não se garante disponibilidade ininterrupta nem ausência de erros técnicos.</p>
-  <h3>7. Links externos</h3><p>Esta versão do site não contém links de navegação para páginas de terceiros. Se links externos forem incluídos futuramente, seus destinos e condições deverão ser identificados ao visitante.</p>
-  <h3>8. Privacidade</h3><p>O eventual tratamento de dados pessoais relacionado à navegação deverá observar a Política de Privacidade e a legislação brasileira aplicável, especialmente a LGPD.</p>
-  <h3>9. Responsabilidade</h3><p>Nada nestes Termos exclui ou limita responsabilidades que não possam ser afastadas pela legislação. O visitante é responsável pelo uso adequado de seu dispositivo e pela verificação das informações antes de tomar decisões.</p>
-  <h3>10. Legislação e foro</h3><p>Aplicam-se as leis da República Federativa do Brasil. Eventuais controvérsias serão submetidas ao foro competente, respeitadas as regras legais de competência e proteção do consumidor, quando aplicáveis.</p>
-  <h3>11. Contato e atualização</h3><p>Solicitações institucionais e dúvidas sobre estes Termos deverão ser encaminhadas pelos canais oficiais da empresa, a serem informados e mantidos atualizados pela CREDFC. Esta página deverá exibir a data da última revisão após aprovação jurídica.</p>
- </article>
-</div></section>
-<section class="section white" id="contato"><div class="wrap">
- <div class="contact"><div><div class="eyebrow">Dados cadastrais</div><h2>CREDFC Sociedade de Crédito Direto S.A.</h2><p>Informações de identificação da pessoa jurídica.</p></div>
- <div><div class="address">Rua Cap. Antônio Rosa, nº 376, Conjunto 31<br>Jardim Paulistano · São Paulo – SP<br>CEP 01443-900 · Brasil</div><p><strong>CNPJ:</strong> 42.627.615/0001-92</p></div></div>
-</div></section>
-</main>
-<footer class="footer"><div class="wrap">
- <div class="footer-grid">
-  <div><a class="brand" href="#inicio"><span class="mark">C</span><span>CREDFC<small>SOCIEDADE DE CRÉDITO DIRETO S.A.</small></span></a><p></p></div>
-  <div><h4>Navegação</h4><ul class="footer-links"><li><a href="#empresa">A empresa</a></li><li><a href="#atuacao">Atuação</a></li><li><a href="#governanca">Compromissos</a></li><li><a href="#contato">Dados cadastrais</a></li></ul></div>
-  <div><h4>Informações legais</h4><ul class="footer-links"><li><a href="#privacidade">Política de Privacidade</a></li><li><a href="#termos">Termos de Uso</a></li></ul><p></p></div>
- </div>
- <div class="copyright"><span>© <span id="year">2026</span> CREDFC Sociedade de Crédito Direto S.A. Todos os direitos reservados.</span><span>CNPJ 42.627.615/0001-92 · São Paulo – SP</span></div>
-</div></footer>
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>{document.querySelector('.links').classList.remove('open');document.querySelector('.menu').setAttribute('aria-expanded','false')}));
-</script>
-</body></html>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-text">Portal do <span>Cliente</span></div>
+                </div>
+                <a href="https://wa.me/5581998250742?text=Olá!%20Preciso%20de%20ajuda%20com%20minha%20solicitação%20do%20plano%20de%20saúde." class="nav-whatsapp" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.358-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> <span>Falar no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">🕐 Atendimento 24h</div>
+                <div class="hero-text">
+                    <h1>Cuidar da sua saúde ficou mais simples.</h1>
+                    <p>Portal de atendimento ao cliente, resolva suas questões sem complicação com nosso time de atendimento online.</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5581998250742?text=Olá!%20Gostaria%20de%20obter%20informações%20sobre%20meu%20plano%20de%20saúde." class="btn-primary" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Consultar Meu Plano
+                    </a>
+                    <a href="https://wa.me/5581998250742?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20sobre%20meu%20plano%20de%20saúde." class="btn-secondary" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Falar com Especialista
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos <span>Serviços</span></h2>
+                <p>Conte com nosso time para esclarecer dúvidas, consultar informações e receber orientação sobre seu plano de saúde. Atendimento simples e online pelo WhatsApp.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:32px;height:32px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div>
+                    <h3>Informações do Plano</h3>
+                    <p>Receba orientações sobre cobertura, rede credenciada, benefícios e demais informações do seu plano de saúde.</p>
+                    <a href="https://wa.me/5581998250742?text=Olá!%20Gostaria%20de%20informações%20sobre%20meu%20plano%20de%20saúde." class="whatsapp-btn" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Consultar Informações
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:32px;height:32px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                    <h3>Atualização Cadastral</h3>
+                    <p>Precisa atualizar seus dados? Nossa equipe pode orientar você sobre os procedimentos e informações cadastrais.</p>
+                    <a href="https://wa.me/5581998250742?text=Olá!%20Preciso%20de%20orientação%20para%20atualizar%20meus%20dados%20cadastrais." class="whatsapp-btn" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg> Atualizar Cadastro
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:32px;height:32px;"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg></div>
+                    <h3>Suporte ao Cliente</h3>
+                    <p>Tire suas dúvidas, altere dados cadastrais, consulte informações do plano e receba atendimento personalizado com nossa equipe.</p>
+                    <a href="https://wa.me/5581998250742?text=Olá!%20Preciso%20de%20suporte%20ao%20cliente%20e%20tenho%20algumas%20dúvidas." class="whatsapp-btn" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg> Falar com Suporte
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:32px;height:32px;"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path><circle cx="20" cy="10" r="2"></circle></svg></div>
+                    <h3>Agendar Exame</h3>
+                    <p>Agendamos seus exames laboratoriais e de imagem na rede credenciada da . Rápido, prático e sem filas de espera.</p>
+                    <a href="https://wa.me/5581998250742?text=Olá!%20Gostaria%20de%20agendar%20um%20exame%20na%20rede%20credenciada." class="whatsapp-btn" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.358-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Agendar Exame
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:32px;height:32px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path><path d="M16 18h.01"></path></svg></div>
+                    <h3>Agendar Consulta</h3>
+                    <p>Marque sua consulta médica com especialistas da rede credenciada. Escolha dia, horário e local de forma simples pelo WhatsApp.</p>
+                    <a href="https://wa.me/5581998250742?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20médica." class="whatsapp-btn" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.358-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Agendar Consulta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Conte com nosso <span>Atendimento</span></h2>
+            <p>Precisa de informações ou orientação sobre seu plano? Fale com nosso time de atendimento online pelo WhatsApp, de forma simples e prática.</p>
+            <a href="https://wa.me/5581998250742?text=Olá!%20Gostaria%20de%20falar%20com%20o%20time%20de%20atendimento." class="cta-whatsapp" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.358-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Falar no WhatsApp Agora
+            </a>
+        </div>
+    </section>
+
+
+    <!-- TERMOS DE USO -->
+    <section class="legal-section" id="termos-de-uso">
+        <div class="container">
+            <h2>Termos de <span>Uso</span></h2>
+            <p class="last-update">Última atualização: 29 de Julho de 2026</p>
+
+            <div class="legal-highlight">
+                <p>Ao acessar e utilizar este site, você concorda em cumprir e estar vinculado aos seguintes Termos de Uso. Caso não concorde com qualquer parte destes termos, solicitamos que não utilize nossos serviços.</p>
+            </div>
+
+            <h3>1. Aceitação dos Termos</h3>
+            <p>Ao utilizar este site e nossos canais de atendimento (incluindo WhatsApp), você declara que leu, compreendeu e aceita integralmente estes Termos de Uso, bem como nossa Política de Privacidade.</p>
+
+            <h3>2. Natureza do Serviço</h3>
+            <p>Este portal disponibiliza canais de atendimento e orientação aos clientes sobre assuntos relacionados aos seus planos de saúde, incluindo:</p>
+            <ul>
+                <li>Esclarecimento de dúvidas sobre o plano de saúde;</li>
+                <li>Orientações sobre coberturas, benefícios e rede credenciada;</li>
+                <li>Informações sobre agendamento de consultas e exames;</li>
+                <li>Suporte ao cliente e orientação para atualização de dados cadastrais.</li>
+            </ul>
+            <p>Este portal tem finalidade informativa e de atendimento. A contratação, cobertura e prestação dos serviços de assistência à saúde são de responsabilidade da operadora do plano contratado.</p>
+
+            <h3>3. Uso Adequado do Site</h3>
+            <p>O usuário se compromete a utilizar este site e nossos canais de comunicação de forma ética e lícita, abstendo-se de:</p>
+            <ul>
+                <li>Fornecer informações falsas, incompletas ou enganosas;</li>
+                <li>Tentar acessar áreas restritas do site sem autorização;</li>
+                <li>Utilizar robôs, spiders ou outros meios automatizados de acesso;</li>
+                <li>Interferir na segurança ou na integridade dos nossos sistemas;</li>
+                <li>Utilizar o site para fins ilícitos ou que violem direitos de terceiros.</li>
+            </ul>
+
+            <h3>4. Responsabilidades do Usuário</h3>
+            <p>Para utilizar nossos serviços, o usuário deve:</p>
+            <ul>
+                <li>Ser maior de 18 anos ou estar representado por responsável legal;</li>
+                <li>Fornecer dados verdadeiros, precisos e atualizados;</li>
+                <li>Manter a confidencialidade de informações sensíveis compartilhadas;</li>
+                <li>Verificar a autenticidade de comunicações recebidas em nosso nome;</li>
+                <li>Informar-nos imediatamente sobre qualquer uso não autorizado de sua conta ou dados.</li>
+            </ul>
+
+            <h3>5. Limitação de Responsabilidade</h3>
+            <p>A  se esforça para manter as informações do site atualizadas e precisas, porém:</p>
+            <ul>
+                <li>Não garantimos que o site estará disponível ininterruptamente ou livre de erros;</li>
+                <li>Não nos responsabilizamos por decisões tomadas por operadoras de saúde parceiras;</li>
+                <li>Não nos responsabilizamos por danos indiretos, incidentais ou consequenciais resultantes do uso ou da impossibilidade de uso dos nossos serviços;</li>
+                <li>A disponibilidade de informações e os procedimentos aplicáveis podem variar conforme a operadora e as condições do plano contratado.</li>
+            </ul>
+
+            <h3>6. Propriedade Intelectual</h3>
+            <p>Todo o conteúdo deste site — incluindo textos, imagens, logotipos, design, código-fonte e marca — é de propriedade exclusiva da  ou de seus licenciadores, protegido pelas leis de propriedade intelectual. É vedada a reprodução, distribuição ou modificação sem autorização prévia e expressa.</p>
+
+            <h3>7. Links para Terceiros</h3>
+            <p>Este site pode conter links para sites de terceiros (como operadoras de saúde e instituições financeiras). A  não se responsabiliza pelo conteúdo, políticas de privacidade ou práticas de sites de terceiros.</p>
+
+            <h3>8. Alterações nos Termos</h3>
+            <p>Reservamo-nos o direito de modificar estes Termos de Uso a qualquer momento. Alterações significativas serão comunicadas por meio dos nossos canais oficiais. O uso continuado do site após as alterações constitui aceitação dos novos termos.</p>
+
+            <h3>9. Legislação Aplicável</h3>
+            <p>Estes Termos de Uso são regidos pelas leis da República Federativa do Brasil. Quaisquer disputas serão resolvidas nos foros da comarca de domicílio do usuário, conforme previsto no Código de Defesa do Consumidor.</p>
+
+            <h3>10. Contato</h3>
+            <p>Para dúvidas, sugestões ou reclamações sobre estes Termos de Uso, entre em contato:</p>
+            <ul>
+                <li><strong>Atendimento:</strong> Disponível 24 horas</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="legal-divider"></div>
+
+    <!-- POLÍTICA DE PRIVACIDADE -->
+    <section class="legal-section" id="politica-privacidade">
+        <div class="container">
+            <h2>Política de <span>Privacidade</span></h2>
+            <p class="last-update">Última atualização: 29 de Julho de 2026</p>
+
+            <div class="legal-highlight">
+                <p>A <strong></strong> valoriza a privacidade e a segurança dos dados de seus clientes. Esta política descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais.</p>
+            </div>
+
+            <h3>1. Dados Coletados</h3>
+            <p>Podemos coletar as seguintes informações quando você utiliza nossos canais de atendimento:</p>
+            <ul>
+                <li><strong>Dados de identificação:</strong> nome completo, CPF, RG e data de nascimento;</li>
+                <li><strong>Dados de contato:</strong> número de telefone, endereço de e-mail e endereço residencial;</li>
+                <li><strong>Dados do plano:</strong> número da carteirinha, operadora, tipo de plano e dependentes;</li>
+                <li><strong>Dados de comunicação:</strong> histórico de conversas pelo WhatsApp, e-mails e ligações telefônicas.</li>
+            </ul>
+
+            <h3>2. Finalidade do Tratamento</h3>
+            <p>Seus dados são coletados e utilizados exclusivamente para as seguintes finalidades:</p>
+            <ul>
+                <li>Prestar atendimento ao cliente e esclarecer dúvidas sobre o plano;</li>
+                <li>Fornecer orientações sobre coberturas, benefícios e rede credenciada;</li>
+                <li>Orientar sobre agendamento de consultas e exames;</li>
+                <li>Orientar sobre atualização de dados cadastrais, quando aplicável;</li>
+                <li>Enviar comunicações relacionadas às solicitações feitas pelo próprio cliente.</li>
+            </ul>
+
+            <h3>3. Compartilhamento de Dados</h3>
+            <p>Seus dados pessoais <strong>não são vendidos, alugados ou comercializados</strong> a terceiros. Podemos compartilhar informações apenas com:</p>
+            <ul>
+                <li>A operadora de plano de saúde contratada, quando necessário para prestar o atendimento solicitado pelo cliente;</li>
+                <li>Prestadores de serviços que auxiliam em nossas operações (ex: sistemas de atendimento), sob rigorosos contratos de confidencialidade;</li>
+                <li>Órgãos públicos, quando exigido por lei ou ordem judicial.</li>
+            </ul>
+
+            <h3>4. Segurança da Informação</h3>
+            <p>Adotamos medidas técnicas e administrativas para proteger seus dados contra acesso não autorizado, alteração, divulgação ou destruição:</p>
+            <ul>
+                <li>Criptografia de dados em trânsito (SSL/TLS);</li>
+                <li>Armazenamento seguro em servidores com controle de acesso;</li>
+                <li>Políticas internas de confidencialidade para nossos colaboradores;</li>
+                <li>Monitoramento contínuo de nossos sistemas.</li>
+            </ul>
+
+            <h3>5. Seus Direitos (LGPD)</h3>
+            <p>Conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você possui os seguintes direitos:</p>
+            <ul>
+                <li>Acessar seus dados pessoais que mantemos;</li>
+                <li>Solicitar correção de dados incompletos, inexatos ou desatualizados;</li>
+                <li>Solicitar anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+                <li>Revogar seu consentimento a qualquer momento;</li>
+                <li>Solicitar portabilidade dos dados a outro fornecedor;</li>
+                <li>Ser informado sobre o compartilhamento de seus dados.</li>
+            </ul>
+            <p>Para exercer seus direitos, entre em contato por e-mail.</p>
+
+            <h3>6. Cookies e Tecnologias de Rastreamento</h3>
+            <p>Este site pode utilizar cookies e tecnologias similares para melhorar a experiência do usuário, analisar tráfego e personalizar conteúdo. Você pode configurar seu navegador para recusar cookies, mas isso pode afetar a funcionalidade de alguns recursos.</p>
+
+            <h3>7. Alterações nesta Política</h3>
+            <p>Esta Política de Privacidade pode ser atualizada periodicamente. Recomendamos que você a revise com frequência. Alterações significativas serão comunicadas por meio dos nossos canais oficiais.</p>
+
+            <h3>8. Contato</h3>
+            <p>Em caso de dúvidas sobre esta Política de Privacidade ou sobre o tratamento de seus dados pessoais, entre em contato:</p>
+            <ul>
+                <li><strong>Atendimento:</strong> Disponível 24 horas</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: 10px;">
+                <a href="#termos-de-uso" target="_self" style="color: #0d47a1; text-decoration: none; font-weight: 600; margin: 0 10px;">Termos de Uso</a> |
+                <a href="#politica-privacidade" target="_self" style="color: #0d47a1; text-decoration: none; font-weight: 600; margin: 0 10px;">Política de Privacidade</a>
+            </p>
+            <p>
+                © 2026 — Todos os direitos reservados.
+            </p>
+            <div style="font-size: 10px; line-height: 1.5; color: #64748b; margin-top: 8px;">
+                <strong>CREDFC Sociedade de Crédito Direto S.A.</strong><br>
+                Rua Cap. Antônio Rosa, nº 376, Conjunto 31 — Jardim Paulistano · São Paulo – SP<br>
+                CEP 01443-900 · Brasil<br>
+                <strong>CNPJ:</strong> 42.627.615/0001-92
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5581998250742?text=Olá!%20Preciso%20de%20ajuda%20com%20minha%20solicitação%20do%20plano%20de%20saúde." class="floating-whatsapp" target="_blank" title="Fale Conosco">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.358-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script>
+    </script>
+
+</body>
+</html>
